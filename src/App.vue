@@ -2,7 +2,7 @@
   <!-- App.vue -->
 
 <v-app>
-  <v-navigation-drawer app>
+  <v-navigation-drawer app color="orange">
     <!-- -->
   </v-navigation-drawer>
 
@@ -39,7 +39,7 @@ export default {
   },
 
   data: () => ({
-    showPassword: false
+   //showPassword: false
   }),
 };
 </script>
