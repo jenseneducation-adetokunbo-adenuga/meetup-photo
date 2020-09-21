@@ -1,0 +1,24 @@
+1. Create docker image
+docker build -t meetup-photo .
+
+2) Run the docker container
+ docker run -it -p 8081:8080 --rm --name dockerize-project-mu meetup-photo
+
+ +++++Push an existing docker image to Heroku++++++++++
+ Repeat the above process to rebuild the image for an changes made in vue app
+
+ 1) heroku container:login (if one hasn't logged in yet)
+ 2) docker tag meetup-photo registry.heroku.com/dockerize-photo/web
+ 3) docker push registry.heroku.com/dockerize-photo/web
+ 4) heroku container:release --app dockerize-photo web
+
+
+ ++++++ Dockerize file and upload to Heroku  +++++
+
+ Heroku app name: dockerize-photo
+
+
+ 1) heroku container:login 
+ 2) docker tag meetup-photo registry.heroku.com/dockerize-photo/web
+ 3) docker push registry.heroku.com/dockerize-photo/web
+ 4) heroku container:release --app dockerize-photo web
