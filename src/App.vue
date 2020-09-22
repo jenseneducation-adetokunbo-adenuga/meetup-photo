@@ -2,9 +2,7 @@
   <!-- App.vue -->
 
 <v-app>
-  <v-navigation-drawer app color="orange">
-    <!-- -->
-  </v-navigation-drawer>
+  <SideBar/>
 
   <v-app-bar app>
     <!-- -->
@@ -30,12 +28,14 @@
 
 <script>
 //import HelloWorld from "./components/HelloWorld";
+import SideBar from "./components/SideBar"
 
 export default {
   name: "App",
 
   components: {
-    //HelloWorld,
+	//HelloWorld,
+	SideBar,
   },
 
   data: () => ({
