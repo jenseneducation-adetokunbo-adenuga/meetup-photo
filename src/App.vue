@@ -14,20 +14,22 @@
       </v-container>
     </v-main>
 
-    <v-footer app></v-footer>
+   <FooterStuff/>
   </v-app>
 </template>
 
 <script>
 import HeaderBar from "./components/HeaderBar";
 import SideBar from "./components/SideBar";
+import FooterStuff from "./components/FooterStuff"
 
 export default {
   name: "App",
 
   components: {
     HeaderBar,
-    SideBar,
+	SideBar,
+	FooterStuff
   },
 
   data: () => ({

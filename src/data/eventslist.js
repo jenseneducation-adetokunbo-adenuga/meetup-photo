@@ -2,8 +2,8 @@ const defaultData = {
   events: [
     {
       id: 1,
-      name: "Meditation and well-being",
-      image: "meditate",
+      name: "Portrait Photography",
+      image: "street portrait",
       date: "THU, SEPT 17,",
       time: "17:30",
       location: "Stockholm",
@@ -13,8 +13,8 @@ const defaultData = {
     },
     {
       id: 2,
-      name: "Halloween home deco ideas",
-      image: "Halloween",
+      name: "Landscape Photography",
+      image: "Scenic Image",
       date: "TUE, OCT 20,",
       time: "14:00",
       location: "Stockholm",
@@ -24,8 +24,8 @@ const defaultData = {
     },
     {
       id: 3,
-      name: "Amigurumi learn to crochet",
-      image: "amigurumi",
+      name: "Sports Photography",
+      image: "Stadium",
       date: "SUN, NOV 09,",
       time: "19:30",
       location: "Stockholm",
@@ -35,8 +35,8 @@ const defaultData = {
     },
     {
       id: 4,
-      name: "Serial programming session",
-      image: "programming",
+      name: "Macro Photography",
+      image: "Insect Image",
       date: "THU, SEPT 17,",
       time: "17:30",
       location: "Stockholm",
