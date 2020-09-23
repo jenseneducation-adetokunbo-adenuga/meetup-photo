@@ -16,6 +16,6 @@ describe("Mounted App", () => {
 	})
 
 	it("renders the correct markup", () => {
-		expect(wrapper.html()).toContain("")
+		expect(wrapper.html()).toContain("<p>How are you?</p>")
 	})
 })
