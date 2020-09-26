@@ -2,8 +2,8 @@
   <!-- App.vue -->
 
   <v-app>
-    <SideBar />
-    <HeaderBar />
+    <side-bar />
+    <header-bar />
 
     <!-- Sizes your content based upon application components -->
     <v-main>
@@ -15,7 +15,7 @@
       </v-container>
     </v-main>
 
-    <FooterStuff />
+    <footer-stuff />
   </v-app>
 </template>
 
