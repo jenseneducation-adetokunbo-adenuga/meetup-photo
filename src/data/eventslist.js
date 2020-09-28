@@ -3,7 +3,7 @@ const defaultData = {
     {
       id: 1,
       name: "Portrait Photography",
-      image: "street portrait",
+      image: "../assets/street-portrait.JPG",
       date: "THU, SEPT 17,",
       time: "17:30",
       location: "Stockholm",
@@ -14,7 +14,7 @@ const defaultData = {
     {
       id: 2,
       name: "Landscape Photography",
-      image: "Scenic Image",
+      image: "Scenic-Image",
       date: "TUE, OCT 20,",
       time: "14:00",
       location: "Stockholm",
@@ -25,7 +25,7 @@ const defaultData = {
     {
       id: 3,
       name: "Sports Photography",
-      image: "Stadium",
+      image: "Indoor-football",
       date: "SUN, NOV 09,",
       time: "19:30",
       location: "Stockholm",
@@ -36,7 +36,7 @@ const defaultData = {
     {
       id: 4,
       name: "Macro Photography",
-      image: "Insect Image",
+      image: "beer-can",
       date: "THU, SEPT 17,",
       time: "17:30",
       location: "Stockholm",
