@@ -20,7 +20,7 @@ export default new Vuex.Store({
     getData({ commit }) {
       getEvents();
       commit("eventState");
-      console.log(localStorage.getItem("viewlist-events"));
+      //console.log(localStorage.getItem("viewlist-events"));
     },
   },
   modules: {},

@@ -28,7 +28,13 @@
           v-bind:event="event"
           v-bind:key="event.id"
         >
-          <v-card :loading="loading" class="mx-3 my-5" max-width="500">
+          <v-card
+            :loading="loading"
+            class="mx-3 my-5"
+            max-width="500"
+            elevation="2"
+            shaped
+          >
             <template slot="progress">
               <v-progress-linear
                 color="deep-purple"
@@ -37,14 +43,17 @@
               ></v-progress-linear>
             </template>
 
-            <v-img height="250" src="">{{ event.image }}</v-img>
+            <v-img
+              height="250"
+              :src="require(`@/assets/${event.image}.png`)"
+            ></v-img>
 
             <v-card-title>{{ event.name }}</v-card-title>
 
             <v-card-text>
               <v-row align="center" class="mx-0">
                 <div class="grey--text ml-4">
-                  4.5 (413)
+                  {{ event.date }}
                 </div>
               </v-row>
 
@@ -59,9 +68,9 @@
 
             <v-divider class="mx-4"></v-divider>
 
-            <v-card-title>Tonight's availability</v-card-title>
+            <v-card-title>Up coming events</v-card-title>
 
-            <v-card-text>
+            <!-- <v-card-text>
               <v-chip-group
                 v-model="selection"
                 active-class="deep-purple accent-4 white--text"
@@ -75,10 +84,10 @@
 
                 <v-chip>9:00PM</v-chip>
               </v-chip-group>
-            </v-card-text>
+            </v-card-text> -->
 
             <v-card-actions>
-              <v-btn color="deep-purple lighten-2" text @click="reserve">
+              <v-btn color="deep-purple white--text " @click="reserve">
                 Reserve
               </v-btn>
             </v-card-actions>

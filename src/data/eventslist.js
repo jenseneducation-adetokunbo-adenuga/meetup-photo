@@ -3,8 +3,8 @@ const defaultData = {
     {
       id: 1,
       name: "Portrait Photography",
-      image: "../assets/street-portrait.JPG",
-      date: "THU, SEPT 17,",
+      image: "street-portrait",
+      date: "THU, OCT 17,",
       time: "17:30",
       location: "Stockholm",
       details:
@@ -37,7 +37,7 @@ const defaultData = {
       id: 4,
       name: "Macro Photography",
       image: "beer-can",
-      date: "THU, SEPT 17,",
+      date: "TUE, NOV 17,",
       time: "17:30",
       location: "Stockholm",
       details:
