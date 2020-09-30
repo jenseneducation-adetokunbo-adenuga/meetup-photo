@@ -6,7 +6,7 @@
       ></v-spacer>
 
       <span class="hidden-sm-and-up">
-        <v-btn>Menu</v-btn>
+        <v-btn @click.stop="drawer = !drawer">Menu</v-btn>
       </span>
       <v-toolbar-items class="hidden-xs-only">
         <v-btn to="/" text>
@@ -29,7 +29,20 @@
       </v-toolbar-items>
     </v-app-bar>
     <v-navigation-drawer v-model="drawer" absolute temporary right>
-      Hi there
+      <v-list>
+        <v-list-item
+          v-for="item in items"
+          :key="item.title"
+          :to="item.link"
+          link
+          ><v-list-item-icon>
+            <v-icon small>mdi-{{ item.icon }}</v-icon>
+          </v-list-item-icon>
+          <v-list-item-content>
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
+          </v-list-item-content></v-list-item
+        >
+      </v-list>
     </v-navigation-drawer>
   </v-container>
 </template>
@@ -40,7 +53,11 @@ export default {
 
   data: () => ({
     drawer: false,
-    //
+    items: [
+      { title: "Home", link: "/", icon: "home" },
+      { title: "Event", link: "SingleEvent", icon: "domain" },
+      { title: "Review", link: "ReviewPage", icon: "pencil" },
+    ],
   }),
 };
 </script>

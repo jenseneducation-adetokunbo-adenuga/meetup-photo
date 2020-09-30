@@ -22,7 +22,7 @@
     <v-app id="inspire">
       <v-container class="fill-height" fluid style="min-height: 434px">
         <v-col
-          cols="6"
+          cols="4"
           justify-content="center"
           v-for="event in getAllEvents"
           v-bind:event="event"
@@ -31,7 +31,7 @@
           <v-card
             :loading="loading"
             class="mx-3 my-5"
-            max-width="500"
+            max-width="700"
             elevation="2"
             shaped
           >
@@ -44,7 +44,7 @@
             </template>
 
             <v-img
-              height="250"
+              height="450"
               :src="require(`@/assets/${event.image}.png`)"
             ></v-img>
 

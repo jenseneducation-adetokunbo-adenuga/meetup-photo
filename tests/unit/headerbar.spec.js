@@ -14,8 +14,27 @@ describe("HeaderBar.vue", () => {
     const wrapper = mount(HeaderBar, {
       localVue,
       vuetify,
-      propsData: { title: "Foobar" },
+      propsData: { title: "Father" },
     });
     expect(wrapper.html()).toMatchSnapshot();
+  });
+
+  it("should emit an event when v-btn is clicked", () => {
+    const wrapper = mount(HeaderBar, {
+      localVue,
+      vuetify,
+      propsData: { title: "Father" },
+    });
+
+    const event = jest.fn();
+    const button = wrapper.find(".v-btn");
+
+    wrapper.vm.$on("action-btn:clicked", event);
+
+    expect(event).toHaveBeenCalledTimes(0);
+
+    button.trigger("click");
+
+    expect(event).toHaveBeenCalledTimes(1);
   });
 });

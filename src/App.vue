@@ -9,7 +9,7 @@
     <v-main>
       <!-- Provides the application the proper gutter -->
       <v-container fluid>
-        <p>How are you?</p>
+        <!-- <p>How are you?</p> -->
         <!-- If using vue-router -->
         <router-view></router-view>
       </v-container>
