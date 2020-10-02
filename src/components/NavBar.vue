@@ -49,7 +49,7 @@
 
 <script>
 export default {
-  name: "HeaderBar",
+  name: "NavBar",
 
   data: () => ({
     drawer: false,
@@ -57,6 +57,7 @@ export default {
       { title: "Home", link: "/", icon: "home" },
       { title: "Event", link: "SingleEvent", icon: "domain" },
       { title: "Review", link: "ReviewPage", icon: "pencil" },
+      { title: "About", link: "About", icon: "book" },
     ],
   }),
 };

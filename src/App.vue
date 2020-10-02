@@ -3,8 +3,8 @@
 
   <v-app>
     <side-bar />
-    <header-bar />
-
+    <nav-bar />
+    
     <!-- Sizes your content based upon application components -->
     <v-main>
       <!-- Provides the application the proper gutter -->
@@ -20,7 +20,8 @@
 </template>
 
 <script>
-import HeaderBar from "./components/HeaderBar";
+
+import NavBar from "./components/NavBar";
 import SideBar from "./components/SideBar";
 import FooterStuff from "./components/FooterStuff";
 
@@ -28,7 +29,7 @@ export default {
   name: "App",
 
   components: {
-    HeaderBar,
+    NavBar,
     SideBar,
     FooterStuff,
   },

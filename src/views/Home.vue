@@ -21,56 +21,57 @@
 
     <v-app id="inspire">
       <v-container class="fill-height" fluid style="min-height: 434px">
-        <v-col
-          cols="4"
-          justify-content="center"
-          v-for="event in getAllEvents"
-          v-bind:event="event"
-          v-bind:key="event.id"
-        >
-          <v-card
-            :loading="loading"
-            class="mx-3 my-5"
-            max-width="700"
-            elevation="2"
-            shaped
+        <v-row>
+          <v-col
+            cols="4"
+            justify-content="center"
+            v-for="event in getAllEvents"
+            v-bind:event="event"
+            v-bind:key="event.id"
           >
-            <template slot="progress">
-              <v-progress-linear
-                color="deep-purple"
-                height="10"
-                indeterminate
-              ></v-progress-linear>
-            </template>
+            <v-card
+              :loading="loading"
+              class="mx-3 my-5"
+              max-width="700"
+              elevation="2"
+              shaped
+            >
+              <template slot="progress">
+                <v-progress-linear
+                  color="deep-purple"
+                  height="10"
+                  indeterminate
+                ></v-progress-linear>
+              </template>
 
-            <v-img
-              height="450"
-              :src="require(`@/assets/${event.image}.png`)"
-            ></v-img>
+              <v-img
+                height="450"
+                :src="require(`@/assets/${event.image}.png`)"
+              ></v-img>
 
-            <v-card-title>{{ event.name }}</v-card-title>
+              <v-card-title>{{ event.name }}</v-card-title>
 
-            <v-card-text>
-              <v-row align="center" class="mx-0">
-                <div class="grey--text ml-4">
-                  {{ event.date }}
+              <v-card-text>
+                <v-row align="center" class="mx-0">
+                  <div class="grey--text ml-4">
+                    {{ event.date }}
+                  </div>
+                </v-row>
+
+                <div class="my-4 subtitle-1">
+                  {{ event.location }}
                 </div>
-              </v-row>
 
-              <div class="my-4 subtitle-1">
-                {{ event.location }}
-              </div>
+                <div>
+                  {{ event.details }}
+                </div>
+              </v-card-text>
 
-              <div>
-                {{ event.details }}
-              </div>
-            </v-card-text>
+              <v-divider class="mx-4"></v-divider>
 
-            <v-divider class="mx-4"></v-divider>
+              <v-card-title>Up coming events</v-card-title>
 
-            <v-card-title>Up coming events</v-card-title>
-
-            <!-- <v-card-text>
+              <!-- <v-card-text>
               <v-chip-group
                 v-model="selection"
                 active-class="deep-purple accent-4 white--text"
@@ -86,13 +87,14 @@
               </v-chip-group>
             </v-card-text> -->
 
-            <v-card-actions>
-              <v-btn color="deep-purple white--text " @click="reserve">
-                Reserve
-              </v-btn>
-            </v-card-actions>
-          </v-card>
-        </v-col>
+              <v-card-actions>
+                <v-btn color="deep-purple white--text " @click="reserve">
+                  Reserve
+                </v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-col>
+        </v-row>
       </v-container>
     </v-app>
 
